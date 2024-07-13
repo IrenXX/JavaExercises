@@ -1,7 +1,7 @@
 
 public class StackW {
     public static void main(String[] args) {
-        System.out.println(checkBrevets("{{}}([])(([]()))".toCharArray()));
+        System.out.println(checkBrevets("{{}}([])(([)]()))".toCharArray()));
     }
 
     public static boolean checkBrevets(char[] elements) {
@@ -15,9 +15,9 @@ public class StackW {
                 if (previous == null) {
                     return false;
                 }
-                if (!compareBrackets(previous, el)){
-                    return false;
-                }
+//                if (!compareBrackets(previous, el)){
+//                    return false;
+//                }
             }
         }
         if (stack.pop()!=null) return false;

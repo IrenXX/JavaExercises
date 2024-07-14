@@ -18,14 +18,19 @@ public class SinglyLinkedList<E> {
         list.addLast("1");
         list.addLast("3");
         list.addLast("2");
+        list.addLast("4");
+        list.addLast("5");
         list.print();
         System.out.println();
         list.remove(1);
         list.print();
+        System.out.println();
+        list.remove(3);
+        list.print();
     }
 
     private void remove(int index) {
-        if (index < 0 || index > size-1) {
+        if (index < 0 || index >= size) {
             System.out.println("Индекс вне рамках списка");
             return;
         }
@@ -46,6 +51,7 @@ public class SinglyLinkedList<E> {
         if (prev.next==null){
             last=prev;
         }
+        size--;
     }
 
     private void print() {

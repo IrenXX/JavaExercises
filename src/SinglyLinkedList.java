@@ -1,5 +1,5 @@
 public class SinglyLinkedList<E> {
-    static class Node<E> {
+    protected static class Node<E> {
         final E value;
         Node<E> next;
 
@@ -9,9 +9,9 @@ public class SinglyLinkedList<E> {
         }
     }
 
-    Node<E> first;
-    Node<E> last;
-    int size = 0;
+    protected Node<E> first;
+    protected Node<E> last;
+    protected int size = 0;
 
     public static void main(String[] args) {
         SinglyLinkedList<String> list = new SinglyLinkedList<>();
@@ -54,7 +54,7 @@ public class SinglyLinkedList<E> {
         size--;
     }
 
-    private void print() {
+    public void print() {
         Node<E> current = this.first;
         while (current != null) {
             System.out.print(current.value + ", ");

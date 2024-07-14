@@ -8,17 +8,17 @@ public class LinkedListWork {
     }
 
     public static boolean checkList(char[] elements) {
-        LinkedList list = new LinkedList<>();
+        LinkedList <Character> list = new LinkedList<>();
         for (char el : elements) {
             if (el == '{' || el == '(' || el == '[') {
                 list.push(el);
             }
             if (el == '}' || el == ')' || el == ']') {
-                if (list.size() == 0) return false;
+                if (list.isEmpty()) return false;
                 list.pop();
             }
         }
-        if (list.size() != 0) return false;
+        if (!list.isEmpty()) return false;
         return true;
     }
 

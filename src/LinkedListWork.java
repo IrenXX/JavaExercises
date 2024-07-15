@@ -8,7 +8,7 @@ public class LinkedListWork {
     }
 
     public static boolean checkList(char[] elements) {
-        LinkedList <Character> list = new LinkedList<>();
+        LinkedList<Character> list = new LinkedList<>();
         for (char el : elements) {
             if (el == '{' || el == '(' || el == '[') {
                 list.push(el);
@@ -18,8 +18,7 @@ public class LinkedListWork {
                 list.pop();
             }
         }
-        if (!list.isEmpty()) return false;
-        return true;
+        return list.isEmpty();
     }
 
 }

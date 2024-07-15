@@ -21,17 +21,17 @@ public class SinglyLinkedList<E> {
         list.addLast("4");
         list.addLast("5");
         list.print();
-        System.out.println();
+        System.out.println("\n***********");
         list.remove(1);
         list.print();
-        System.out.println();
+        System.out.println("\n***********");
         list.remove(3);
         list.print();
     }
 
     private void remove(int index) {
         if (index < 0 || index >= size) {
-            System.out.println("Индекс вне рамках списка");
+            System.err.println("\nУказанный индекс для удаления вне рамках списка");
             return;
         }
         if (size == 1) {

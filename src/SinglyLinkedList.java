@@ -21,12 +21,27 @@ public class SinglyLinkedList<E> {
         list.addLast("4");
         list.addLast("5");
         list.print();
+        System.out.println("\nRevers LinkedList");
+        list.revers();
         System.out.println("\n***********");
         list.remove(1);
         list.print();
         System.out.println("\n***********");
         list.remove(3);
         list.print();
+    }
+
+    private void revers() {
+        Node<E> current = this.first;
+        for (int i = size-1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                current = current.next;
+            }
+            System.out.print(current.value + ", ");
+            current = this.first;
+        }
+        System.out.print(current.value);
+
     }
 
     private void remove(int index) {
@@ -41,6 +56,10 @@ public class SinglyLinkedList<E> {
             return;
         }
         Node<E> prev = this.first;
+        if (prev.next == null) {
+            last = prev;
+        }
+
         for (int i = 0; i < index - 1; i++) {
             prev = prev.next;
         }
@@ -48,9 +67,6 @@ public class SinglyLinkedList<E> {
         System.out.println((index+1)+"-й элемент удаляемый в списке: "+prev.next.value);
         prev.next = prev.next.next;
 
-        if (prev.next==null){
-            last=prev;
-        }
         size--;
     }
 

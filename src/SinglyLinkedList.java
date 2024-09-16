@@ -33,7 +33,7 @@ public class SinglyLinkedList<E> {
 
     private void revers() {
         Node<E> current = this.first;
-        for (int i = size-1; i > 0; i--) {
+        for (int i = size - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 current = current.next;
             }
@@ -64,7 +64,7 @@ public class SinglyLinkedList<E> {
             prev = prev.next;
         }
 
-        System.out.println((index+1)+"-й элемент удаляемый в списке: "+prev.next.value);
+        System.out.println((index + 1) + "-й элемент удаляемый в списке: " + prev.next.value);
         prev.next = prev.next.next;
 
         size--;

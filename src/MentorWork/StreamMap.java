@@ -14,8 +14,8 @@ public class StreamMap {
     public static void main(String[] args) {
         List<FIO> list = Arrays.asList(new FIO("Tom", "Soyer"), new FIO("Jack", "Black"));
         Map<String, String> caseInMap = list.stream().collect(
-                Collectors.toMap(name->name.getName().toLowerCase(), FIO::getSurname,
-                        (f1,f2)->f1,()->new CaseInMap<>()));
+                Collectors.toMap(name -> name.getName().toLowerCase(), FIO::getSurname,
+                        (f1, f2) -> f1, () -> new CaseInMap<>()));
 //        caseInMap = list.stream().collect(
 //                Collectors.toMap(FIO::getName, FIO::getSurname, (f1, f2) -> f1, ()->new TreeMap<>(String.CASE_INSENSITIVE_ORDER)));
         System.out.println(caseInMap);
@@ -23,7 +23,7 @@ public class StreamMap {
     }
 }
 
- class CaseInMap<K, V> extends HashMap<String, V> {
+class CaseInMap<K, V> extends HashMap<String, V> {
     @Override
     public V put(String key, V value) {
         return super.put(key.toLowerCase(), value);
@@ -41,11 +41,23 @@ class FIO {
 
     public FIO(String name, String surname) {
         this.name = name;
-        this.surname = surname;}
+        this.surname = surname;
+    }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
-    public String getSurname() {return surname;}
-    public void setSurname(String surname) {this.surname = surname;}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
 }

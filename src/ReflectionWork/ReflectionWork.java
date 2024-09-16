@@ -49,7 +49,7 @@ public class ReflectionWork {
         );
         System.out.println("--------------------------------");
 
-        Constructor [] constructor = classEmployee.getConstructors();
+        Constructor[] constructor = classEmployee.getConstructors();
         Arrays.stream(constructor).forEach(constr -> System.out.println("Constructor name of = " + constr.getName() +
                 " has = " + constr.getParameterCount() + " parameter types = " +
                 Arrays.toString(constr.getParameterTypes()) + "\n"));
@@ -57,11 +57,8 @@ public class ReflectionWork {
 
         Constructor constructor2 = classEmployee.getDeclaredConstructor(int.class, String.class, double.class);
         System.out.println("Constructor has " + constructor2.getParameterCount()
-                +" parameters, type are: " + Arrays.toString(constructor2.getParameterTypes()));
+                + " parameters, type are: " + Arrays.toString(constructor2.getParameterTypes()));
         System.out.println("*******");
-
-
-
 
 
     }

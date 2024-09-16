@@ -7,9 +7,9 @@ public class StackSecond<E> extends SinglyLinkedList<E> {
         stack.push("4");
 
         stack.print();
-        System.out.println("\nУдаляем элемент из стека - элемент со значением: "+stack.pop());
+        System.out.println("\nУдаляем элемент из стека - элемент со значением: " + stack.pop());
         stack.print();
-        System.out.println("\nУдаляем элемент из стека - элемент со значением: "+stack.pop());
+        System.out.println("\nУдаляем элемент из стека - элемент со значением: " + stack.pop());
         stack.print();
     }
 

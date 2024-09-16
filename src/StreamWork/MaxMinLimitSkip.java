@@ -17,10 +17,10 @@ public class MaxMinLimitSkip {
 //        System.out.println(min);
 //        Student max = list.stream().max((x,y)->x.getAge()-y.getAge()).get();
 //        System.out.println(max);
-        list.stream().filter(s->s.getAge()>20).forEach(System.out::println);
+        list.stream().filter(s -> s.getAge() > 20).forEach(System.out::println);
         System.out.println("------------------------------");
-        list.stream().filter(s->s.getAge()>20).limit(1).forEach(System.out::println);
+        list.stream().filter(s -> s.getAge() > 20).limit(1).forEach(System.out::println);
         System.out.println("------------------------------");
-        list.stream().filter(s->s.getAge()>20).skip(1).forEach(System.out::println);
+        list.stream().filter(s -> s.getAge() > 20).skip(1).forEach(System.out::println);
     }
 }

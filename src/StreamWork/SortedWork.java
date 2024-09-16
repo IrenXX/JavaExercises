@@ -19,7 +19,7 @@ public class SortedWork {
 
         //сортировка
         cities.stream()
-                .filter(city -> city.length() >5)
+                .filter(city -> city.length() > 5)
                 .sorted()
                 .forEach(city -> System.out.println(city));
         System.out.println("--------------------------------------");
@@ -58,8 +58,8 @@ public class SortedWork {
 //                        p.getName(), p.getCost()));
 
         //сортировка по ценнику - методом comparing
-        phoneStream.sorted(comparing(Phone::getCost)).forEach(p->System.out.printf("%s - %d \n",
-                        p.getName(), p.getCost()));
+        phoneStream.sorted(comparing(Phone::getCost)).forEach(p -> System.out.printf("%s - %d \n",
+                p.getName(), p.getCost()));
     }
 }
 
@@ -70,22 +70,24 @@ class PhoneComparator implements Comparator<Phone> {
     }
 }
 
- class Phone {
+class Phone {
     private String name;
     private int cost;
 
-     public void setCost(int cost) {
-         this.cost = cost;
-     }
+    public Phone(String name, int cost) {
+        this.name = name;
+        this.cost = cost;
+    }
 
-     public String getName() {
+    public String getName() {
         return name;
     }
+
     public int getCost() {
         return cost;
     }
-    public Phone(String name, int cost) {
-        this.name = name;
+
+    public void setCost(int cost) {
         this.cost = cost;
     }
 }

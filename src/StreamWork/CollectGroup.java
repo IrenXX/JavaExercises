@@ -109,6 +109,12 @@ class PhoneWork {
     private int cost;
     private String company;
 
+    public PhoneWork(String name, String company, int cost) {
+        this.name = name;
+        this.cost = cost;
+        this.company = company;
+    }
+
     @Override
     public String toString() {
         return "{" +
@@ -128,11 +134,5 @@ class PhoneWork {
 
     public String getCompany() {
         return company;
-    }
-
-    public PhoneWork(String name, String company, int cost) {
-        this.name = name;
-        this.cost = cost;
-        this.company = company;
     }
 }

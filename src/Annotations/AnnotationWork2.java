@@ -2,6 +2,14 @@ package Annotations;
 
 import java.lang.annotation.*;
 
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface SmartPhone {
+    String OS() default "Android";
+
+    int yearCreation() default 2010;
+}
+
 public class AnnotationWork2 {
     public static void main(String[] args) throws ClassNotFoundException {
 
@@ -17,13 +25,6 @@ public class AnnotationWork2 {
         System.out.println("Annotation info from Iphone class: \n" +
                 sm2.OS() + " - OS; " + sm2.yearCreation() + " - year creation;");
     }
-}
-
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
-@interface SmartPhone {
-    String OS() default "Android";
-    int yearCreation() default 2010;
 }
 
 @SmartPhone

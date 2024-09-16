@@ -1,4 +1,3 @@
-
 //Смотри: У тебя есть строка такого формата:
 //        "fullName:test1;birthDate:1234;birthPlace:4567;"
 //Твоя задача положить ее в мапу в таком формате:
@@ -16,7 +15,7 @@ public class Main {
         String[] array = string.split(";");
         for (int i = 0; i < array.length; i++) {
             String[] keyValue = array[i].split(":");
-                map.put(keyValue[0], keyValue[1]);
+            map.put(keyValue[0], keyValue[1]);
         }
         System.out.println(map);
     }

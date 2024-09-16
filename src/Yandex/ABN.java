@@ -11,7 +11,7 @@ public class ABN {
         Integer A = Integer.parseInt(reader.readLine());
         Integer B = Integer.parseInt(reader.readLine());
         Integer N = Integer.parseInt(reader.readLine());
-        int x = A/N+A%N, y = B/N+B%N;
+        int x = A / N + A % N, y = B / N + B % N;
         if (x > y) {
             writer.write("OK\n");
         } else {

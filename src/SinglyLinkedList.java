@@ -1,14 +1,4 @@
 public class SinglyLinkedList<E> {
-    protected static class Node<E> {
-        final E value;
-        Node<E> next;
-
-        public Node(E value, Node<E> next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
-
     protected Node<E> first;
     protected Node<E> last;
     protected int size = 0;
@@ -91,5 +81,15 @@ public class SinglyLinkedList<E> {
         size++;
         last.next = node;
         last = node;
+    }
+
+    protected static class Node<E> {
+        final E value;
+        Node<E> next;
+
+        public Node(E value, Node<E> next) {
+            this.value = value;
+            this.next = next;
+        }
     }
 }

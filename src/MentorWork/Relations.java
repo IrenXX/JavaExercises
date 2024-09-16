@@ -40,7 +40,7 @@ class StrawBerry {
         ArrayList<Relations> array = new ArrayList<>();
         array.add(new Relations(177, "Jack", (short) 26));
         array.add(new Relations((short) 34, 167, "Den"));
-        array.add(new Relations("Hum",(short)34, 167));
+        array.add(new Relations("Hum", (short) 34, 167));
         System.out.println(array.toString());
         System.out.println(array.size());
     }

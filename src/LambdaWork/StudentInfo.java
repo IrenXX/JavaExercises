@@ -37,7 +37,7 @@ class Test {
 //            }
 //        });
 //        StudentInfo info = new StudentInfo();
-        int result = avarageScore(students,stud->stud.cource);
+        int result = avarageScore(students, stud -> stud.cource);
         System.out.println(result);
 
 //        Collections.sort(students, (o1, o2) -> o1.cource - o2.cource);

@@ -23,13 +23,13 @@ public class CopyOnWriteArrList {
             }
         };
         Runnable runnable1 = () -> {
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                list.remove(1);
-                list.add("Elena");
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            list.remove(1);
+            list.add("Elena");
         };
 
         Thread thread = new Thread(runnable);

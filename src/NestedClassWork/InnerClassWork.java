@@ -2,14 +2,15 @@ package NestedClassWork;
 
 public class InnerClassWork {
     String color;
-    private int doors;
     Engine engine;
+    private int doors;
 
     public InnerClassWork(String color, int doors) {
         this.color = color;
         this.doors = doors;
-     //   this.engine = this.new Engine(horsePower);
+        //   this.engine = this.new Engine(horsePower);
     }
+
     @Override
     public String toString() {
         return "My Car {" +
@@ -19,10 +20,10 @@ public class InnerClassWork {
                 '}';
     }
 
-    void setEngine (Engine engine){
+    void setEngine(Engine engine) {
         Engine e = new Engine(300);
         System.out.println(e.horsePower);
-        
+
         System.out.println(doors);
         this.engine = engine;
     }
@@ -33,6 +34,7 @@ public class InnerClassWork {
         public Engine(int horsePower) {
             this.horsePower = horsePower;
         }
+
         @Override
         public String toString() {
             return "My Engine {" +
@@ -41,11 +43,12 @@ public class InnerClassWork {
         }
     }
 }
+
 class Test3 {
     public static void main(String[] args) {
-     InnerClassWork car = new InnerClassWork("Black",4);
-     InnerClassWork.Engine engine = car.new Engine(300);
-     car.setEngine(engine);
+        InnerClassWork car = new InnerClassWork("Black", 4);
+        InnerClassWork.Engine engine = car.new Engine(300);
+        car.setEngine(engine);
         System.out.println(car);
         System.out.println(System.identityHashCode(car));
     }

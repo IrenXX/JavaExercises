@@ -21,7 +21,7 @@ public class BinarySearechEmployee {
     }
 }
 
-class Employee implements Comparable <Employee> {
+class Employee implements Comparable<Employee> {
     String name;
     String surname;
     Integer age;
@@ -39,7 +39,7 @@ class Employee implements Comparable <Employee> {
 
     @Override
     public int compareTo(Employee otherEmp) {
-        int result = this.age-otherEmp.age;
+        int result = this.age - otherEmp.age;
         if (result == 0) {
             return this.name.compareTo(otherEmp.name);
         }

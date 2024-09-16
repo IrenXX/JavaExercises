@@ -1,21 +1,23 @@
 package NestedClassWork;
 
 public class Car {
+    private static int a;
     String color;
     int doors;
     Engine engine;
-    private static int a;
 
     public Car(String color, int doors, Engine engine) {
         this.color = color;
         this.doors = doors;
         this.engine = engine;
     }
-    void metod (){
+
+    void metod() {
         Engine eng = new Engine(300);
         System.out.println(Engine.countOfObjects);
         System.out.println(eng.horsePower);
     }
+
     @Override
     public String toString() {
         return "My Car {" +
@@ -26,8 +28,8 @@ public class Car {
     }
 
     public static class Engine {
-        private int horsePower;
         static int countOfObjects;
+        private int horsePower;
 
         public Engine(int horsePower) {
             this.horsePower = horsePower;
@@ -43,11 +45,12 @@ public class Car {
         }
     }
 }
- class Test {
+
+class Test {
     public static void main(String[] args) {
         Car.Engine engine = new Car.Engine(256);
         System.out.println(engine);
         Car car = new Car("red", 2, engine);
         System.out.println(car);
     }
- }
+}

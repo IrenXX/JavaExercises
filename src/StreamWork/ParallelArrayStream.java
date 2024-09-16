@@ -25,8 +25,8 @@ public class ParallelArrayStream {
 //        for(Phone p: phones)
 //            System.out.printf("%s - %d \n", p.getName(), p.getCost());
 
-        int [] nums  = new int[]{1,2,3,-4,5,-86,7,-38,9};
-        Arrays.parallelPrefix(nums,(x,y)->x+y);
+        int[] nums = new int[]{1, 2, 3, -4, 5, -86, 7, -38, 9};
+        Arrays.parallelPrefix(nums, (x, y) -> x + y);
 //        Arrays.parallelSort(nums);
         System.out.println(Arrays.toString(nums));
     }

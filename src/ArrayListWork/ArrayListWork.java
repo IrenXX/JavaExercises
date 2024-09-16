@@ -15,7 +15,7 @@ public class ArrayListWork {
         StringBuilder sb1 = new StringBuilder("A");
         StringBuilder sb2 = new StringBuilder("B");
         StringBuilder sb3 = new StringBuilder("C");
-        StringBuilder [] array1 = {sb1, sb2, sb3};
+        StringBuilder[] array1 = {sb1, sb2, sb3};
         List<StringBuilder> list = Arrays.asList(array1);//массив получается зависимым полностью от первого массива SB
 //        System.out.println(list);
 //        array1[0].append("!!!");
@@ -31,7 +31,7 @@ public class ArrayListWork {
         list2.add("B");
         list2.add("C");
 
-        List <Integer> list3 = List.of(3,8,13);
+        List<Integer> list3 = List.of(3, 8, 13);
         System.out.println(list3);
 
         List<String> list4 = List.copyOf(list2);

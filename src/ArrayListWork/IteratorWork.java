@@ -10,7 +10,7 @@ public class IteratorWork {
         list1.add("C");
         list1.add("A");
 
-        Iterator <String> iterator = list1.iterator();
+        Iterator<String> iterator = list1.iterator();
         while (iterator.hasNext()) { //проверяет - есть ли элемент
             iterator.next(); //получает элемент из коллекции
             iterator.remove(); // выполняет действия с элементом

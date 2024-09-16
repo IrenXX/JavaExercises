@@ -6,33 +6,36 @@ public class RecordsClass {
         System.out.println(tom);
         Person bob = new Person("Bob", -21);
         System.out.println(bob);
-        Person tomas = new Person("Tom", "Smith",36);
+        Person tomas = new Person("Tom", "Smith", 36);
         System.out.println(tomas.name());
         System.out.println(tomas.equals(tom));
 
     }
 }
-record Person (String name, int age){
+
+record Person(String name, int age) {
     static int minAge;
-    static{
+
+    static {
         minAge = 18;
         System.out.println("Static initializer");
     }
 
-    Person{
-        if (age<0 || age>110){
-            age=18;
+    Person {
+        if (age < 0 || age > 110) {
+            age = 18;
         }
     }
+
     //переопределяем конструктор Person
-    Person(String firstName, String lastName, int age){
+    Person(String firstName, String lastName, int age) {
         this(firstName + " " + lastName, age);//тут идет вызов канонического конструктора
     }
 
     //переопределяем мотоды
     @Override
     public String name() {
-        return "Mister "+name;
+        return "Mister " + name;
     }
 
 }

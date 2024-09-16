@@ -8,6 +8,6 @@ public class Test {
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
-        Arrays.stream(array).map(length-> array.length/2).forEach(System.out::print);
+        Arrays.stream(array).map(length -> array.length / 2).forEach(System.out::print);
     }
 }

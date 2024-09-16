@@ -1,4 +1,3 @@
-
 public class StackW {
     public static void main(String[] args) {
         System.out.println(checkBrevets("{{}}([])(([]()))".toCharArray()));

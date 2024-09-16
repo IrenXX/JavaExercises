@@ -21,16 +21,16 @@ public class HashSetWork {
         hashSet.add(1);
         hashSet.add(8);
         hashSet.add(3);
-        System.out.println("hashSet "+hashSet);
+        System.out.println("hashSet " + hashSet);
         HashSet<Integer> hashSet1 = new HashSet<>();
         hashSet1.add(1);
         hashSet1.add(5);
         hashSet1.add(8);
-        System.out.println("hashSet1 "+hashSet1);
+        System.out.println("hashSet1 " + hashSet1);
 
         HashSet<Integer> Union = new HashSet<>(hashSet);
         Union.addAll(hashSet1);
-        System.out.println("Union "+Union);
+        System.out.println("Union " + Union);
 
         HashSet<Integer> intersect = new HashSet<>(hashSet);
         intersect.retainAll(hashSet1);

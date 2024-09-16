@@ -12,17 +12,18 @@ public class SupplierWork {
         }
         return al;
     }
-    public static void changeCar (Car car, Consumer<Car> carConsumer) {
+
+    public static void changeCar(Car car, Consumer<Car> carConsumer) {
         carConsumer.accept(car);
     }
 
     public static void main(String[] args) {
-        ArrayList<Car> createCars = createCar(()->new Car("BMV","V6",300.0));
+        ArrayList<Car> createCars = createCar(() -> new Car("BMV", "V6", 300.0));
         System.out.println(createCars);
-        changeCar(createCars.get(0),car->{
-            car.brand="Mercedes";
-            car.model="V3";
-            System.out.println("Upgrade "+car);
+        changeCar(createCars.get(0), car -> {
+            car.brand = "Mercedes";
+            car.model = "V3";
+            System.out.println("Upgrade " + car);
         });
     }
 }

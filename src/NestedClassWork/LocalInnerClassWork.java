@@ -8,20 +8,22 @@ public class LocalInnerClassWork {
 }
 
 class Math {
-    private int a=10;
-    public void gerResult (){
-         final int delimoe=21;
+    private int a = 10;
+
+    public void gerResult() {
+        final int delimoe = 21;
         class Delenie {
-//            private int delimoe;
+            //            private int delimoe;
             private int delitel;
 
-//            public int getDelimoe() {
+            //            public int getDelimoe() {
 //                return delimoe;
 //            }
             public int getDelitel() {
                 return delitel;
             }
-//            public void setDelimoe(int delimoe) {
+
+            //            public void setDelimoe(int delimoe) {
 //                System.out.println(a);
 //                this.delimoe = delimoe;
 //            }
@@ -32,17 +34,18 @@ class Math {
             public int getChasnoe() {
                 return delimoe / delitel;
             }
+
             public int getOstatok() {
-                return delimoe%delitel;
+                return delimoe % delitel;
             }
         }
-    Delenie delenie = new Delenie();
+        Delenie delenie = new Delenie();
 //        delenie.setDelimoe(21);
         delenie.setDelitel(3);
-        System.out.println("делимое = "+delimoe);
-        System.out.println("делитель = "+delenie.getDelitel());
-        System.out.println("часное = "+delenie.getChasnoe());
-        System.out.println("остаток от деления = "+delenie.getOstatok());
+        System.out.println("делимое = " + delimoe);
+        System.out.println("делитель = " + delenie.getDelitel());
+        System.out.println("часное = " + delenie.getChasnoe());
+        System.out.println("остаток от деления = " + delenie.getOstatok());
     }
 
 }

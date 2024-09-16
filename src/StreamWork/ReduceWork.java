@@ -30,7 +30,7 @@ public class ReduceWork {
 
         int sum = phoneStream.reduce(0,
                 (x, y) -> {
-                    if (y.getCost()< 30000) {
+                    if (y.getCost() < 30000) {
                         return x + y.getCost();
                     } else {
                         return 0;

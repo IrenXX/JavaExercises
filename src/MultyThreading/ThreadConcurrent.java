@@ -17,10 +17,11 @@ public class ThreadConcurrent {
 
         Runnable runnable = () -> {
             synchronized (synhList) {
-            Iterator<Integer> iterator = synhList.iterator();
-            while (iterator.hasNext()) {
-                System.out.println(iterator.next());
-            }}
+                Iterator<Integer> iterator = synhList.iterator();
+                while (iterator.hasNext()) {
+                    System.out.println(iterator.next());
+                }
+            }
         };
         Runnable runnable1 = () -> {
             synhList.remove(10);

@@ -13,8 +13,10 @@ public class SortedMethod {
         int result = Arrays.stream(arr).filter(e -> e % 2 == 1).
                 map(e -> {
                     if (e % 3 == 0) {
-                        e = e / 3;}
-                    return e;}).
+                        e = e / 3;
+                    }
+                    return e;
+                }).
                 reduce((a, e) -> a + e).getAsInt();
         System.out.println(result);
     }

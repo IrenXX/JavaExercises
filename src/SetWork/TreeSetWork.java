@@ -39,12 +39,20 @@ public class TreeSetWork {
         System.out.println("TailSet " + treeSet.tailSet(st2));
         System.out.println("Subset " + treeSet.subSet(st2, st1));
         System.out.println(treeSet);
-        System.out.println(st1.hashCode()==st3.hashCode());
+        System.out.println(st1.hashCode() == st3.hashCode());
         System.out.println(st1.equals(st3));
     }
 }
 
 class Student {
+    String name;
+    int course;
+
+    public Student(String name, int course) {
+        this.name = name;
+        this.course = course;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -56,14 +64,6 @@ class Student {
     @Override
     public int hashCode() {
         return Objects.hash(course);
-    }
-
-    String name;
-    int course;
-
-    public Student(String name, int course) {
-        this.name = name;
-        this.course = course;
     }
 
     @Override

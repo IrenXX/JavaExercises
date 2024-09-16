@@ -12,7 +12,7 @@ public class RemovaIfW {
         aList.add("Poka");
 //        aList.removeIf(s->s.length()>4);
         System.out.println(aList);
-        Predicate<String> pr =s->s.length()>4;
+        Predicate<String> pr = s -> s.length() > 4;
         aList.removeIf(pr);
     }
 }

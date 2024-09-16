@@ -13,7 +13,7 @@ public class RegExprWork3 {
         boolean result = s2.matches("\\w+@\\w+\\.(com|ru)");
         System.out.println(result);
 
-        String [] array  = s.split(" ");
+        String[] array = s.split(" ");
         System.out.println(Arrays.toString(array));
     }
 }

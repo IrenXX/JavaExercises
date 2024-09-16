@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class VectorWork {
     public static void main(String[] args) {
-        Vector <String> v = new Vector();
+        Vector<String> v = new Vector();
         v.add("A");
         v.add("B");
         v.add("C");
@@ -15,7 +15,7 @@ public class VectorWork {
 //        System.out.println(v);
 //        System.out.println(v.get(1));
 
-        Stack  <String>stack = new Stack();
+        Stack<String> stack = new Stack();
         stack.push("Ida");
         stack.push("Tom");
         stack.push("Bob");

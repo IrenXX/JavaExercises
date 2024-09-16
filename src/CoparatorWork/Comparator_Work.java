@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Comparator_Work {
     public static void main(String[] args) {
-        List <String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add("Ivan");
         list.add("Petya");
         list.add("Sam");
@@ -20,15 +20,15 @@ public class Comparator_Work {
         System.out.println("---------------");
 
         //создание сортировки нашего метода
-        List <Employee> employeeList = new ArrayList<>();
-        Employee emp1 = new Employee("Tom", "Ivanov",26);
+        List<Employee> employeeList = new ArrayList<>();
+        Employee emp1 = new Employee("Tom", "Ivanov", 26);
         employeeList.add(emp1);
-        Employee emp2 = new Employee("Tom", "Petrov",22);
+        Employee emp2 = new Employee("Tom", "Petrov", 22);
         employeeList.add(emp2);
-        Employee emp3 = new Employee("Pavel", "Sidorov",34);
+        Employee emp3 = new Employee("Pavel", "Sidorov", 34);
         employeeList.add(emp3);
         System.out.println("До сортировки \n" + employeeList);
-               //для comparable
+        //для comparable
         Collections.sort(employeeList);
         System.out.println("После сортировки по годам \n" + employeeList);
         //для comparator
@@ -40,8 +40,7 @@ public class Comparator_Work {
     }
 }
 
-class Employee implements Comparable <Employee>
-{
+class Employee implements Comparable<Employee> {
     String name;
     String surname;
     Integer age;
@@ -98,12 +97,12 @@ class Employee implements Comparable <Employee>
 //    }
 //}
 
-class NameComparator implements Comparator<Employee>{
+class NameComparator implements Comparator<Employee> {
 
     @Override
     public int compare(Employee emp1, Employee emp2) {
         int res = emp1.name.compareTo(emp2.name);
-        if (res == 0){
+        if (res == 0) {
             res = emp1.surname.compareTo(emp2.surname);
         }
         return res;

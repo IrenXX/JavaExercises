@@ -27,7 +27,7 @@ public class ReduceWork2 {
         str.add("World");
         str.add("Java");
 
-        String result3 = str.stream().reduce("", (accumulator, element) -> accumulator +" "+ element);
+        String result3 = str.stream().reduce("", (accumulator, element) -> accumulator + " " + element);
         System.out.println(result3);
 
     }

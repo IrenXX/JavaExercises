@@ -12,7 +12,7 @@ public class RegExprWork6 {
 //        String myString = matcher.replaceAll("$5/$6 $1 $2 $3 $4 ($7)");
 //        System.out.println(myString);
 
-        while ((matcher.find())){
+        while ((matcher.find())) {
             System.out.println(matcher.group(7));
         }
     }

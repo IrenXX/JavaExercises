@@ -30,7 +30,7 @@ public class FilterWork {
 //                .sorted((x, y) -> x.getAge() - y.getAge())
 //                .forEach(System.out::println);
 
-        Optional first= list.stream().map(element ->
+        Optional first = list.stream().map(element ->
                 {
                     element.setName(element.getName().toUpperCase());
                     return element;
@@ -45,6 +45,13 @@ public class FilterWork {
 class Student {
     private String name;
     private int age;
+    private int cource;
+
+    public Student(String name, int age, int cource) {
+        this.name = name;
+        this.age = age;
+        this.cource = cource;
+    }
 
     public int getCource() {
         return cource;
@@ -68,14 +75,6 @@ class Student {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    private int cource;
-
-    public Student(String name, int age, int cource) {
-        this.name = name;
-        this.age = age;
-        this.cource = cource;
     }
 
     @Override

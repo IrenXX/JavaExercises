@@ -1,4 +1,3 @@
-
 //В списке чисел найти 3 максимальных
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class ThreeMax {
         //первый вариант решения
         list.sort(Comparator.reverseOrder());
         for (int i = 0; i < 3; i++) {
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i) + " ");
         }
         System.out.print("\nSecond var: ");
         //второй вариант решения
@@ -31,7 +30,7 @@ public class ThreeMax {
 //                iterator.remove();
 //                }
 //            }
-            System.out.print(max+" ");
+            System.out.print(max + " ");
         }
     }
 }

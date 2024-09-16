@@ -13,11 +13,11 @@ public class ReflectionWork2 {
         Object object = constructor.newInstance();
 
         Constructor<?> constructor1 = employeeClass.getConstructor(int.class, String.class);
-        Object o = constructor1.newInstance(5,"Pole");
+        Object o = constructor1.newInstance(5, "Pole");
         System.out.println(o);
 
         Method method = employeeClass.getMethod("setSalary", double.class);
-        method.invoke(o,400.44);
+        method.invoke(o, 400.44);
         System.out.println(o);
     }
 }

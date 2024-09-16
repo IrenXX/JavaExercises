@@ -10,6 +10,7 @@ class Student {
         this.age = age;
         this.cource = cource;
     }
+
     @Override
     public String toString() {
         return "Student {" +

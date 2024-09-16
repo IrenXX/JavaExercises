@@ -27,9 +27,9 @@ public class Lucky {
             map.put(charStr[i], counter);
         }
         Character subStr;
-        for (Map.Entry<Character, Integer> mapStr: map.entrySet()) {
-            if (mapStr.getValue()>2){
-                 subStr= mapStr.getKey();
+        for (Map.Entry<Character, Integer> mapStr : map.entrySet()) {
+            if (mapStr.getValue() > 2) {
+                subStr = mapStr.getKey();
             }
         }
 //

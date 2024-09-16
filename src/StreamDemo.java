@@ -19,12 +19,12 @@ public class StreamDemo {
     public static int findRoom(List<Room> rooms, int minAge) {
 
         rooms.stream()
-                .flatMap(room -> {
+                .map(room -> {
                     room.getPersons().stream().filter(p -> p.getAge() < minAge);
                     return room.getNumber();
                 }).findAny()
                 .get();
-return 0;
+        return 0;
 //        return rooms.stream()
 //                .filter(room ->
 //                        room.getPersons().stream()

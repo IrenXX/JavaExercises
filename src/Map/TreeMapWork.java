@@ -6,12 +6,12 @@ public class TreeMapWork {
     public static void main(String[] args) {
         //сортировка по Integer
         TreeMap<Integer, Student> treeMap = new TreeMap<>();
-        Student st1 = new Student("Tom","Soyer",1);
-        Student st2 = new Student("Oleg","Popov",2);
-        Student st3 = new Student("Mike","Ivanov",3);
-        treeMap.put(23,st1);
-        treeMap.put(56,st3);
-        treeMap.put(45,st2);
+        Student st1 = new Student("Tom", "Soyer", 1);
+        Student st2 = new Student("Oleg", "Popov", 2);
+        Student st3 = new Student("Mike", "Ivanov", 3);
+        treeMap.put(23, st1);
+        treeMap.put(56, st3);
+        treeMap.put(45, st2);
         System.out.println(treeMap);
         System.out.println(treeMap.firstKey());
         System.out.println(treeMap.get(90));

@@ -17,11 +17,12 @@ public class ArrayBlockingQueueMethod {
             while (true) {
                 try {
                     queue.put(++i);
-                    System.out.println("Producer insert " + i +" "+queue);
+                    System.out.println("Producer insert " + i + " " + queue);
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
-                }}
+                }
+            }
         }).start();
 
         //Consumer
@@ -29,11 +30,12 @@ public class ArrayBlockingQueueMethod {
             while (true) {
                 try {
                     Integer j = queue.take();
-                    System.out.println("Consumer drop " + j+" "+queue);
+                    System.out.println("Consumer drop " + j + " " + queue);
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
-                }}
+                }
+            }
         }).start();
 
     }

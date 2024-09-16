@@ -3,15 +3,15 @@ package MentorWork;
 import java.util.Arrays;
 
 public class MyArrayList {
+    static int size = 1;
     Object[] array;
-    static int size=1;
 
     public MyArrayList() {
         this.array = new Object[10];
     }
 
     public void addList(Object obj) {
-        if(size<array.length) {
+        if (size < array.length) {
             for (int i = 0; i < array.length; i++) {
                 if (array[i] == null) {
                     array[i] = obj;
@@ -21,7 +21,7 @@ public class MyArrayList {
             }
         } else {
             //array = Arrays.copyOf(array, (array.length * 2)+1);
-            Object[] arrayNew = new Object[(array.length * 2)+1];
+            Object[] arrayNew = new Object[(array.length * 2) + 1];
             for (int j = 0; j < array.length; j++) {
                 arrayNew[j] = array[j];
             }
@@ -41,7 +41,7 @@ public class MyArrayList {
                 for (int j = Index + 1; j < array.length; j++) {
                     arrayNew[j] = array[j - 1];
                 }
-               // System.arraycopy(array, 0, arrayNew, 0, Index + 1);
+                // System.arraycopy(array, 0, arrayNew, 0, Index + 1);
                 for (int i = 0; i < Index; i++) {
                     arrayNew[i] = array[i];
                 }
@@ -50,11 +50,11 @@ public class MyArrayList {
             }
         } else {
             //this.array = Arrays.copyOf(array, Index+1);
-            Object[] arrayNew = new Object[Index+1];
+            Object[] arrayNew = new Object[Index + 1];
             for (int j = 0; j < array.length; j++) {
                 arrayNew[j] = array[j];
             }
-            arrayNew[Index-1] = obj;
+            arrayNew[Index - 1] = obj;
             this.array = arrayNew;
         }
     }

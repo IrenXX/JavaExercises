@@ -6,6 +6,7 @@ public class ThreeElement {
 
     }
 }
+
 class ListNode {
     private int value;
     private ListNode next;
@@ -17,6 +18,6 @@ class ListNode {
 
 
     public ListNode findElement(ListNode head) {
-
+        return null;
     }
 }

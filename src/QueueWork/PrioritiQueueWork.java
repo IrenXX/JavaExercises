@@ -30,11 +30,19 @@ public class PrioritiQueueWork {
         priorityQueue1.poll();
         System.out.println(priorityQueue1);
         priorityQueue1.poll();
-        System.out.println(priorityQueue1); 
+        System.out.println(priorityQueue1);
     }
 }
 
 class Student {
+    String name;
+    int course;
+
+    public Student(String name, int course) {
+        this.name = name;
+        this.course = course;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -46,14 +54,6 @@ class Student {
     @Override
     public int hashCode() {
         return Objects.hash(course);
-    }
-
-    String name;
-    int course;
-
-    public Student(String name, int course) {
-        this.name = name;
-        this.course = course;
     }
 
     @Override

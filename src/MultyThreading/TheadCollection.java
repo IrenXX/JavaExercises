@@ -14,7 +14,9 @@ public class TheadCollection {
 //        List<Integer> target = new ArrayList<>();
         List<Integer> threads =
                 Collections.synchronizedList(new ArrayList<>());
-        Runnable runnable = () -> {threads.addAll(source);};
+        Runnable runnable = () -> {
+            threads.addAll(source);
+        };
         Thread thread = new Thread(runnable);
         Thread thread2 = new Thread(runnable);
         thread.start();

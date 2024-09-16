@@ -9,9 +9,9 @@ public class RegExWork2 {
         Pattern pattern = Pattern.compile("[AD]");
 
         Matcher matcher = pattern.matcher(s);
-        while (matcher.find()){
-            System.out.println("Position pattern: "+matcher.start() +
-                    "\t "+matcher.group());
+        while (matcher.find()) {
+            System.out.println("Position pattern: " + matcher.start() +
+                    "\t " + matcher.group());
         }
 
     }

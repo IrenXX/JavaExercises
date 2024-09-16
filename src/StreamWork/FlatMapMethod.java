@@ -20,7 +20,7 @@ public class FlatMapMethod {
         facultyList.add(f2);
 
         facultyList.stream().flatMap(faculty -> faculty.getStudentsOnFaculty().stream())
-                .forEach(e-> System.out.println(e.getName()));
+                .forEach(e -> System.out.println(e.getName()));
 
     }
 }
@@ -37,6 +37,7 @@ class Faculty {
     public List<Student> getStudentsOnFaculty() {
         return studentsOnFaculty;
     }
+
     public void addStudentsOnFaculty(Student st) {
         studentsOnFaculty.add(st);
     }

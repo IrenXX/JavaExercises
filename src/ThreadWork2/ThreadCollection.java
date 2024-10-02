@@ -1,10 +1,10 @@
-package MultyThreading;
+package ThreadWork2;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class TheadCollection {
+public class ThreadCollection {
     public static void main(String[] args) throws InterruptedException {
 
         List<Integer> source = new ArrayList<>();

@@ -1,4 +1,4 @@
-package MultyThreading;
+package ThreadWork2;
 
 import java.util.concurrent.ArrayBlockingQueue;
 

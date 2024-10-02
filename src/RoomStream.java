@@ -4,7 +4,7 @@ import java.util.List;
 //    Найти любую комнату, в которой есть человек с возрастом меньше чем minAge,
 //    и вывести её номер. Использовать StreamApi
 
-public class StreamDemo {
+public class RoomStream {
     public static void main(String[] args) {
         Person person1 = new Person("Tom", 27);
         Person person2 = new Person("Bob", 34);

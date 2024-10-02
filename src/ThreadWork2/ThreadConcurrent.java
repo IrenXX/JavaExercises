@@ -1,4 +1,4 @@
-package MultyThreading;
+package ThreadWork2;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ public class ThreadConcurrent {
     public static void main(String[] args) throws InterruptedException {
 
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100; i++) {
             list.add(i);
         }
 

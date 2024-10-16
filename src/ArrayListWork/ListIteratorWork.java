@@ -11,16 +11,20 @@ public class ListIteratorWork {
         for (char c : s.toCharArray()) {
             list.add(c);
         }
+        System.out.println(getPalindrome(list));
+    }
+
+    private static boolean getPalindrome(List<Character> list) {
         ListIterator<Character> iterator = list.listIterator();
         ListIterator<Character> reversIIterator = list.listIterator(list.size());
-        boolean isPalyndrome = true;
+        boolean isPalindrome = true;
         while (iterator.hasNext() && reversIIterator.hasPrevious()) {
             if (iterator.next() != reversIIterator.previous()) {
-                isPalyndrome = false;
+                isPalindrome = false;
                 break;
             }
         }
-        System.out.println(isPalyndrome);
+        return isPalindrome;
     }
 }
 

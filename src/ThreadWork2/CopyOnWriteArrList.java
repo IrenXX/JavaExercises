@@ -24,7 +24,7 @@ public class CopyOnWriteArrList {
         };
         Runnable runnable1 = () -> {
             try {
-                Thread.sleep(300);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

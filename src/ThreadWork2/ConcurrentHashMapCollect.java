@@ -26,7 +26,7 @@ public class ConcurrentHashMapCollect {
         };
         Runnable runnable1 = () -> {
             try {
-                Thread.sleep(300);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

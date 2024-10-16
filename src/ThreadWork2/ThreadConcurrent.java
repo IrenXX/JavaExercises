@@ -26,6 +26,7 @@ public class ThreadConcurrent {
         Runnable runnable1 = () -> {
             synhList.remove(10);
         };
+
         Thread thread = new Thread(runnable);
         Thread thread1 = new Thread(runnable1);
         thread.start();

@@ -2,7 +2,7 @@ package Kote;
 
 import java.util.Map;
 
-public class Main {
+public class MainCat {
     public static void main(String[] args) {
         Cat exprtimentalCat = new Cat("Василий1", 1);
         Cat cat2 = new Cat("Василий2", 2);

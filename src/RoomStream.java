@@ -18,20 +18,21 @@ public class RoomStream {
 
     public static int findRoom(List<Room> rooms, int minAge) {
 
-        rooms.stream()
-                .map(room -> {
-                    room.getPersons().stream().filter(p -> p.getAge() < minAge);
-                    return room.getNumber();
-                }).findAny()
-                .get();
-        return 0;
-//        return rooms.stream()
-//                .filter(room ->
-//                        room.getPersons().stream()
-//                                .anyMatch(e -> e.getAge() < minAge))
+//        rooms.stream()
+//                .map(room -> {
+//                    room.getPersons().stream().filter(p -> p.getAge() < minAge);
+//                    return room.getNumber();
+//                })
 //                .findAny()
-//                .get()
-//                .getNumber();
+//                .get();
+//        return 0;
+        return rooms.stream()
+                .filter(room ->
+                        room.getPersons().stream()
+                                .anyMatch(e -> e.getAge() < minAge))
+                .findAny()
+                .get()
+                .getNumber();
     }
 }
 

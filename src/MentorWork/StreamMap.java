@@ -12,9 +12,14 @@ import java.util.stream.Collectors;
 //То есть map.get("Вася") и map.get("ВаСя") выдает одну и ту же фамилию
 public class StreamMap {
     public static void main(String[] args) {
-        List<FIO> list = Arrays.asList(new FIO("Tom", "Soyer"), new FIO("Jack", "Black"));
-        Map<String, String> caseInMap = list.stream().collect(
-                Collectors.toMap(name -> name.getName().toLowerCase(), FIO::getSurname,
+        List<FIO> list = Arrays.asList(
+                new FIO("Tom", "Soyer"),
+                new FIO("Jack", "Black")
+        );
+        Map<String, String> caseInMap = list.stream()
+                .collect(
+                Collectors
+                        .toMap(name -> name.getName().toLowerCase(), FIO::getSurname,
                         (f1, f2) -> f1, () -> new CaseInMap<>()));
 //        caseInMap = list.stream().collect(
 //                Collectors.toMap(FIO::getName, FIO::getSurname, (f1, f2) -> f1, ()->new TreeMap<>(String.CASE_INSENSITIVE_ORDER)));

@@ -4,7 +4,6 @@ public class LinkedListWork {
     public static void main(String[] args) {
         char[] elements = "{{}}([])(([()]()))".toCharArray();
         System.out.println(checkList(elements));
-
     }
 
     public static boolean checkList(char[] elements) {

@@ -1,11 +1,9 @@
 //В списке чисел найти 3 максимальных
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class ThreeMax {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(34);//3
@@ -32,5 +30,22 @@ public class ThreeMax {
 //            }
             System.out.print(max + " ");
         }
+    }
+
+    public static void main2(String[] args) {
+        List list = new ArrayList<Long>();
+        list.add(1L);
+        list.add(1.0);
+        list.add(new Object());
+        list.add("I am long");
+        System.out.println(list.size());
+    }
+
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Bob", "Tom", "Andrey");
+        Collections.sort(names);
+        System.out.println("List after sort() " + names);
+        List<String> namesAfterSort = names.stream().sorted().toList();
+        System.out.println("List after sorted() " + names);
     }
 }

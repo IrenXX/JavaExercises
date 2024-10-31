@@ -34,7 +34,7 @@ class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return "name= '%s', surname= '%s', age= %d ; \t".formatted(name, surname, age);
+        return "{name= '%s', surname= '%s', age= %d} \t".formatted(name, surname, age);
     }
 
     @Override

@@ -30,7 +30,7 @@ public class Zeroes {
         List<Integer> list = Arrays.asList(nums1);
 
         Collections.reverse(list);
-        System.out.println(list.toString());
+        System.out.println(list);
 
 
 //        List<String> names = Arrays.asList("John", "Mary", "Peter", "Alice");

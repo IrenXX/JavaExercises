@@ -7,9 +7,7 @@ public class ReentrantLockWork {
 
     public static void main(String[] args) throws InterruptedException {
 
-
         Task task = new Task();
-
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -54,7 +52,7 @@ class Task {
         lock.unlock();
     }
 
-    public void showCounter(){
+    public void showCounter() {
         System.out.println(count);
     }
 }

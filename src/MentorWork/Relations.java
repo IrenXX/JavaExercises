@@ -1,6 +1,7 @@
 package MentorWork;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Relations {
     String name;
@@ -36,12 +37,20 @@ public class Relations {
 }
 
 class StrawBerry {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         ArrayList<Relations> array = new ArrayList<>();
         array.add(new Relations(177, "Jack", (short) 26));
         array.add(new Relations((short) 34, 167, "Den"));
         array.add(new Relations("Hum", (short) 34, 167));
         System.out.println(array.toString());
         System.out.println(array.size());
+    }
+
+    static {
+        main(new String[]{"Hello"});
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Hi");
     }
 }

@@ -23,7 +23,9 @@ public class CollectGroup2 {
 //            for (Student student : entry.getValue()) {
 //                System.out.println(student);
 //            }
-        Map<Boolean, List<Student>> mapSt = list.stream().collect(Collectors.partitioningBy(st -> st.getAge() >= 21));
+        Map<Boolean, List<Student>> mapSt =
+                list.stream()
+                        .collect(Collectors.partitioningBy(st -> st.getAge() >= 21));
         for (Map.Entry<Boolean, List<Student>> entry : mapSt.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue().toString());
         }

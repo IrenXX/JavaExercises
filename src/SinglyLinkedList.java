@@ -1,3 +1,5 @@
+
+
 public class SinglyLinkedList<E> {
     protected Node<E> first;
     protected Node<E> last;
@@ -13,10 +15,10 @@ public class SinglyLinkedList<E> {
         list.print();
         System.out.println("\nRevers LinkedList");
         list.revers();
-        System.out.println("\n***********");
-        list.remove(1);
+        System.out.println("\n********************");
+        list.remove(-1);
         list.print();
-        System.out.println("\n***********");
+        System.out.println("\n********************");
         list.remove(3);
         list.print();
     }

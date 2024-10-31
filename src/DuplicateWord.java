@@ -9,7 +9,7 @@ public class DuplicateWord {
 
     }
 
-    //посчет одинаковых букв в строке
+    //подсчет одинаковых букв в строке
     private static Map<String, Integer> countWord(String[] splitWord) {
         Map<String, Integer> countMap = new HashMap<>();
 
@@ -18,7 +18,6 @@ public class DuplicateWord {
             counter++;
             countMap.put(element, counter);
         }
-
         return countMap;
     }
 }

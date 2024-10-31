@@ -29,9 +29,7 @@ public class CallableWork {
         try {
             Integer future = submit.get();
             System.out.println("Value from thread " + future);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
 

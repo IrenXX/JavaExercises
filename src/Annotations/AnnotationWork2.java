@@ -6,7 +6,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @interface SmartPhone {
     String OS() default "Android";
-
     int yearCreation() default 2010;
 }
 

@@ -7,7 +7,7 @@ import java.util.List;
 public class MainKisa {
     public static void main(String[] args) {
         List<Kisa> kisas = Kisa.makeKisas(5);
-       // PrinterKisas.print (kisas);
+        PrinterKisas.print (kisas);
 
         System.out.println("Кисы после сортировки");
         System.out.println("**********************************");

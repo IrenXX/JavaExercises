@@ -1,6 +1,5 @@
 package Kote;
 
-import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Random;
 
@@ -8,8 +7,8 @@ public class ActiveCats {
     private static final Random r = new Random();
     private static final List<String> names =
             List.of("Peach", "Ginger", "Toby", "Seth", "Tibbles", "Tabby", "Poppy", "Millie", "Daisy", "Jasper", "Misty", "Minka");
-    private final String name;
 
+    private final String name;
     private String action;
 
     public ActiveCats(String action) {
@@ -22,7 +21,6 @@ public class ActiveCats {
     }
 
     public void doAction() {
-//        System.out.printf("Я %s. %s%n", name, action.perform());
         System.out.printf("Я %s. %s%n", name, action);
     }
 

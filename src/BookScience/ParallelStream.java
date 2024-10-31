@@ -15,7 +15,7 @@ public class ParallelStream {
     public long parallelSum(long n) {
         return Stream.iterate(1L, i -> i + 1)
                 .limit(n)
-//                .parallel()
+                .parallel()
                 .reduce(0L, (x, y) -> {
                     System.out.println("x= " + x + "; y = " + y + ";");
                     return y += x;
